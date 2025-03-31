@@ -101,7 +101,9 @@ class PetClassifier:
         img = tf.keras.utils.load_img(img_path, target_size=self.shape)
         img_array = tf.keras.utils.img_to_array(img)
         img_array = np.expand_dims(img_array, axis=0)
-        img_array = tf.keras.applications.mobilenet_v2.preprocess_input(img_array)
+        # img_array = tf.keras.applications.mobilenet_v2.preprocess_input(img_array)
+        # img_array = img_array / 255.0
+
         model = self.model
         probability = model.predict(img_array)[0][0]
         label = 'Кошка' if probability < 0.5 else 'Собака'

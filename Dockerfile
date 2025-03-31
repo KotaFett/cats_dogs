@@ -12,10 +12,7 @@ COPY requirements.txt /app/
 RUN pip install --upgrade pip
 # Удаляем старую версию blinker, если она есть
 RUN python -m pip uninstall -y blinker || true
-RUN pip install --no-cache-dir --break-system-packages -r requirements.txt
-
-# Экспонируем порт
-EXPOSE 8000
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Запускаем приложение
 CMD ["python", "app.py"]

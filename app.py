@@ -36,5 +36,5 @@ def uploaded_file(filename):
 
 if __name__ == "__main__":
     # Запускаем сервер
-    app.run(debug=True, use_reloader=True, host="0.0.0.0", port=8000)
+    app.run(debug=False, use_reloader=True, host="0.0.0.0", port=80)
 
