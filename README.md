@@ -14,3 +14,7 @@
 В командной строке с проектом нужно создать виртуальную среду `python -m venv venv`,<br>
 установить зависимости из файла `pip install -r requirements.txt`, <br> 
 запустить команду для начала обучения `python train.py`,<br>
+
+## Структура модели
+
+![model_summary.png](model_summary.png)
